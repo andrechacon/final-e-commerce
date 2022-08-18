@@ -1,0 +1,40 @@
+<%- include('./partials/head') %>
+
+</head>
+
+<body class="body-detalle">
+    <%- include('./partials/header') %>
+
+    <div class="uk-container">
+        <div class="uk-section">
+
+            <h1 class="uk-text-center"><%= title %> </h1>
+
+
+            <div class="comentarios uk-flex uk-flex-center uk-margin-large-top">
+                <ul class="uk-flex uk-flex-wrap uk-flex-between uk-child-width-1-3 uk-padding-remove">
+                  
+                </ul>
+            </div>
+            <% for( let i = 0; i < productos.length; i++ ) { %>
+                <li>
+                  <a href="/productos/detalle/<%= productos[i].id %>" >
+                    <img src="<%= productos[i].img_url %>" alt="" width="100%">
+                    <h5 class="uk-text-center"><%= productos[i].nombre %></h5>
+                  </a>
+                </li>  
+                <% } %>
+                
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
